@@ -1,0 +1,2 @@
+config SHIELD_MANTA
+    def_bool $(shields_list_contains,manta)
