@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-// Trivial keymap used to experimentally determine the row/column mapping
+// My weird keymap
 
 / {
     keymap {
@@ -9,10 +9,33 @@
 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &kp P
-                &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K &kp L &kp SEMI
-                &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp SLASH
-                                      &kp SPACE &kp BSPC
+                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &none
+                &mt LALT A &mt LCTRL S &mt LCMD D &mt LSHIFT F &kp G
+                                        &kp H &mt RSHIFT J &mt RCMD K &mt RCTRL L &mt RALT P
+                &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &none
+                                    &lt 1 SPACE &lt 2 BSPC
+            >;
+        };
+
+        num_layer {
+            bindings = <
+                &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
+                &none &kp LEFT &kp DOWN &kp RIGHT &kp TAB
+                                         &kp DEL &mt RSHIFT KP_N5 &mt RCMD KP_N6 &mt RCTRL KP_N7 &mt RALT KP_N0
+                &none &none &none &none &none                 &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
+                                                     &trans  &kp BSPC
+            >;
+        };
+
+        pun_layer {
+            bindings = <
+                &kp EXCL &kp AT &kp POUDN &kp DOLLAR &kp PERCENT
+                                              &kp CARET &kp AMPS &kp STAR &kp LBKT &none
+                &mt LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp ESC
+                                        &kp SEMI &mt RSHIFT SQT &mt RCMD SLASH &mt RCTRL BSLH &mt RALT RBKT
+                &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
+                                        &kp COLON &kp DQT &kp QMARK &kp PIPE &none
+                                        &kp RET  &trans
             >;
         };
     };
