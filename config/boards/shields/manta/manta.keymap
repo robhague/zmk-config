@@ -29,7 +29,7 @@
 
         pun_layer {
             bindings = <
-                &kp EXCL &kp AT &kp POUDN &kp DOLLAR &kp PERCENT
+                &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
                                               &kp CARET &kp AMPS &kp STAR &kp LBKT &none
                 &mt LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp ESC
                                         &kp SEMI &mt RSHIFT SQT &mt RCMD SLASH &mt RCTRL BSLH &mt RALT RBKT
