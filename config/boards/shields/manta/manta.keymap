@@ -21,7 +21,7 @@
             bindings = <
                 &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
                 &none &kp LEFT &kp DOWN &kp RIGHT &kp TAB
-                                         &kp DEL &mt RSHIFT KP_N5 &mt RCMD KP_N6 &mt RCTRL KP_N7 &mt RALT KP_N0
+                                         &kp DEL &mt RSHIFT KP_N4 &mt RCMD KP_N5 &mt RCTRL KP_N6 &mt RALT KP_N0
                 &none &none &none &none &none                 &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
                                                      &trans  &kp BSPC
             >;
