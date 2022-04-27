@@ -9,7 +9,7 @@
 
         default_layer {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &none
+                &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &mo 3
                 &mt LALT A &mt LCTRL S &mt LCMD D &mt LSHIFT F &kp G
                                         &kp H &mt RSHIFT J &mt RCMD K &mt RCTRL L &mt RALT P
                 &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &none
@@ -36,6 +36,15 @@
                 &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
                                         &kp COLON &kp DQT &kp QMARK &kp PIPE &none
                                         &kp RET  &trans
+            >;
+        };
+        
+        control_layer {
+            bindings = <
+                &none &none &none &none &out OUT_TOG     &none &out OUT_USB &none &none &none
+                &none &none &none &none &none            &none &none &none &none &none
+                &none &none &none &none &out OUT_BLE     &none &none &none &none &none
+                                                 &none &none
             >;
         };
     };
