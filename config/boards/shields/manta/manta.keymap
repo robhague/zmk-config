@@ -22,7 +22,7 @@
         num_layer {
             bindings = <
                 &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
-                &kp ESC &kp LEFT &kp DOWN &kp RIGHT &kp RET
+                &kp ESC &kp LEFT &kp DOWN &kp RIGHT &kp ESC
                                          &kp DEL &mt RSHIFT KP_N4 &mt RCMD KP_N5 &mt RCTRL KP_N6 &mt RALT KP_N0
                 &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &none
                                                               &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
@@ -34,11 +34,11 @@
             bindings = <
                 &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
                                               &kp CARET &kp AMPS &kp STAR &kp LBKT &none
-                &mt LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp RET
+                &mt LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp TAB
                                         &kp SEMI &mt RSHIFT SQT &mt RCMD SLASH &mt RCTRL BSLH &mt RALT RBKT
                 &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
                                         &kp COLON &kp DQT &kp QMARK &kp PIPE &none
-                                        &kp TAB  &trans
+                                        &kp RET  &trans
             >;
         };
         
