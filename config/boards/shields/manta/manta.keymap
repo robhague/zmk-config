@@ -7,7 +7,7 @@
 
 / {
     behaviors {
-        # See https://zmk.dev/docs/behaviors/hold-tap
+        // See https://zmk.dev/docs/behaviors/hold-tap
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
