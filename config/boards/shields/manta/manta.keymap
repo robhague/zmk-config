@@ -5,6 +5,10 @@
 
 // My weird keymap
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     behaviors {
         // See https://zmk.dev/docs/behaviors/hold-tap
