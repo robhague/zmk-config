@@ -6,14 +6,27 @@
 // My weird keymap
 
 / {
+    behaviors {
+        # See https://zmk.dev/docs/behaviors/hold-tap
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
                 &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I &kp O &mo 3
-                &mt LALT A &mt LCTRL S &mt LCMD D &mt LSHIFT F &kp G
-                                        &kp H &mt RSHIFT J &mt RCMD K &mt RCTRL L &mt RALT P
+                &hm LALT A &hm LCTRL S &hm LCMD D &hm LSHIFT F &kp G
+                                        &kp H &hm RSHIFT J &hm RCMD K &hm RCTRL L &hm RALT P
                 &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &none
                                     &lt 1 SPACE &lt 2 BSPC
             >;
@@ -23,7 +36,7 @@
             bindings = <
                 &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
                 &kp ESC &kp LEFT &kp DOWN &kp RIGHT &kp TAB
-                                         &kp DEL &mt RSHIFT KP_N4 &mt RCMD KP_N5 &mt RCTRL KP_N6 &mt RALT KP_N0
+                                         &kp DEL &hm RSHIFT KP_N4 &hm RCMD KP_N5 &hm RCTRL KP_N6 &hm RALT KP_N0
                 &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &none
                                                               &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
                                                      &trans  &kp BSPC
@@ -34,8 +47,8 @@
             bindings = <
                 &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
                                               &kp CARET &kp AMPS &kp STAR &kp LBKT &none
-                &mt LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp ESC
-                                        &kp SEMI &mt RSHIFT SQT &mt RCMD SLASH &mt RCTRL BSLH &mt RALT RBKT
+                &hm LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp ESC
+                                        &kp SEMI &hm RSHIFT SQT &hm RCMD SLASH &hm RCTRL BSLH &hm RALT RBKT
                 &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
                                         &kp COLON &kp DQT &kp QMARK &kp PIPE &none
                                         &kp RET  &trans
