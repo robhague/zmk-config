@@ -47,7 +47,7 @@
             bindings = <
                 &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
                                               &kp CARET &kp AMPS &kp STAR &kp LBKT &none
-                &hm LALT GRAVE &kp LCTRL &kp LCMD &kp LSHIFT &kp ESC
+                &hm LALT GRAVE &kp LCTRL &kp LCMD &caps_word &kp ESC
                                         &kp SEMI &hm RSHIFT SQT &hm RCMD SLASH &hm RCTRL BSLH &hm RALT RBKT
                 &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
                                         &kp COLON &kp DQT &kp QMARK &kp PIPE &none
