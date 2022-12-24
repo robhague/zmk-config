@@ -40,7 +40,7 @@
             bindings = <
                 &none &kp PG_UP &kp UP &kp PG_DN &kp MINUS    &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &none
                 &kp ESC &kp LEFT &kp DOWN &kp RIGHT &kp TAB
-                                         &kp DEL &hm RSHIFT KP_N4 &hm RCMD KP_N5 &hm RCTRL KP_N6 &hm RALT KP_N0
+                                         &kp KP_MINUS &hm RSHIFT KP_N4 &hm RCMD KP_N5 &hm RCTRL KP_N6 &hm RALT KP_N0
                 &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &none
                                                               &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &none
                                                      &trans  &kp BSPC
