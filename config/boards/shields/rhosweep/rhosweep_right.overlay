@@ -1,0 +1,51 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "rhosweep.dtsi"
+
+&default_transform {
+	col-offset = <17>;
+};
+
+/*  The Mechboards UK board has some pin layout changes.
+
+    While I was able to quickly figure out the left side
+    by diffing the patches Mechboards UK did to their QMK
+    firmware fork, I had to fight my way through trial and
+    error for the right side.
+
+    Note that the comments with the keycodes are for a 
+    Dvorak layout.
+*/
+
+/ {
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+        input-gpios
+        = <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // f
+        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // g
+        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // c
+        , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // r
+        , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // l
+
+        , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // s
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // n
+        , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // t
+        , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // thumb key 2
+        , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // h 
+
+        , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // z
+        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // v
+        , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // thumb key 1 
+        , <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // m 
+        , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // b
+
+        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // d
+        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // w
+        ;
+    };
+};

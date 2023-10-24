@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "rhosweep.dtsi"
+
+/*  The Mechboards UK board has some pin layout changes.
+    Since they only provide a QMK firmware, we try to
+    map the changes from the QMK firmware to ZMK.
+
+    This is the default QMK layout:
+    (https://github.com/qmk/qmk_firmware/blob/10631b4b480c618c72b4c6b908025f2408e15f5b/keyboards/ferris/sweep/config.h)
+
+    #define DIRECT_PINS { \
+        { E6, F7, F6, F5, F4 }, \
+        { B1, B3, B2, B6, D3 }, \
+        { D1, D0, D4, C6, D7 }, \
+        { B4, B5, NO_PIN, NO_PIN, NO_PIN } \
+    }
+
+    This is the Mechboards layout:
+    (https://github.com/qmk/qmk_firmware/blob/10631b4b480c618c72b4c6b908025f2408e15f5b/keyboards/ferris/sweep_choc_mbuk/config.h)
+
+    #define DIRECT_PINS { \
+        { D7, F7, F6, F5, F4 }, \
+        { B1, B3, B2, B6, D3 }, \
+        { D1, D0, D4, C6, E6 }, \
+        { B5, B4, NO_PIN, NO_PIN, NO_PIN } \
+    }
+
+*/
+
+/ {
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+        input-gpios
+        = <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        ;
+    };
+};
+
+/*  For reference: This is the default layout in ZMK/cradio:
+        = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+
+        , <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+    };
+*/

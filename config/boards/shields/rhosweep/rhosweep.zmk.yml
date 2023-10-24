@@ -1,0 +1,12 @@
+file_format: "1"
+id: rhosweep
+name: Sweep/rhosweep
+type: shield
+url: https://github.com/davidphilipbarr/Sweep
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+siblings:
+  - rhosweep_left
+  - rhosweep_right
