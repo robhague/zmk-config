@@ -12,6 +12,5 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: nice_nano_v2
-    shield: ["manta", "rhosweep"]
+board: ["nice_nano_v2"]
+shield: ["manta", "rhosweep_left", "rhosweep_right"]
