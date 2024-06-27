@@ -51,11 +51,11 @@
         right_layer {
             bindings = <
                 &kp EXCL &kp AT &kp POUND &kp DOLLAR &kp PERCENT
-                                            &kp KP_PLUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &trans
+                                            &kp PLUS &kp N7 &kp N8 &kp N9 &trans
                 &hm LALT GRAVE &kp LCTRL &kp LCMD &caps_word &kp ESC
-                                            &kp KP_MINUS &hm RSHIFT KP_N4 &hm RCMD KP_N5 &hm RCTRL KP_N6 &hm RALT KP_N0
+                                            &kp MINUS &hm RSHIFT N4 &hm RCMD N5 &hm RCTRL N6 &hm RALT N0
                 &kp TILDE &kp LA(N3) &kp LA(LS(MINUS)) &kp LPAR &kp RPAR
-                                            &kp KP_EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans
+                                            &kp EQUAL &kp N1 &kp N2 &kp N3 &trans
                                         &none &kp RET  &trans &none
             >;
         };
