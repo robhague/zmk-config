@@ -13,4 +13,4 @@
 #
 ---
 board: ["nice_nano@2.0.0"]
-shield: ["manta", "rhosweep_left", "rhosweep_right"]
+shield: ["manta", "rhosweep_left", "rhosweep_right", "settings_reset"]
