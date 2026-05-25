@@ -12,5 +12,5 @@
 #     shield: reviung41
 #
 ---
-board: ["nice_nano_v2"]
-shield: ["manta", "rhosweep_left", "rhosweep_right"]
+board: ["nice_nano@2.0.0"]
+shield: ["manta", "rhosweep_left", "rhosweep_right", "settings_reset"]
